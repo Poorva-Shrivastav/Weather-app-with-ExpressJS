@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+
+:root{
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+/* for making website responsive. Now 1rem = 10px */
+html{
+    font-size: 62.5;   
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    margin: 0;
+}
+
+.main_menu{
+    background-color: var(--main-bg);
+}
+
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+    /* padding: 1rem 1rem; */
+}
+
+.navbar li{
+    margin-left: 2rem;
+}
+
+.navbar a{
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar-toggler{
+    background-color: lightgray;
+}
+
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+.main_header_left{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_left p{
+    font-size: 2rem;
+}
+
+.main_header_left h1{
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+
+.main_header_left span{
+    color: var(--main-color);
+}
+
+.main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform:uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+    outline: none;
+    margin-top: 2rem;
+    color: var(--main-color);
+    background-color: var(--main-bg);
+}
+
+.main_header_left button:hover{
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+.main_header_right{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_right figure img{
+    box-shadow: 18px 18px 18px -6px var(--main-color);
+    /* filter :drop-shadow(0 0.5rem 1rem rgba(0,0,0, 0)); */
+}
+
+/* weather.hbs styling */
+
+.form{
+    width: 60%;
+    position: relative;
+    margin: 5rem auto;
+}
+
+.form input[type=text]{
+    width: 90%;
+    margin-left: 5%;
+    padding: 1rem 2rem 1rem 1rem;
+    /* padding-left: 25px; */
+    background-color: #1e202b;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    border-radius: 1.8rem;
+}
+
+::placeholder{
+    color: #bfb1b8;
+}
+
+.form input[type=submit]{
+    position:absolute;
+    height: 3rem;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background-color: var(--main-color);
+    padding: 0 1.5rem;
+    border-radius: 2rem;
+    color: white;
+    font-size: 20px;
+    margin-right: 2rem;
+}
+
+.form input[type=submit]:hover{
+    color: var(--main-color);
+    background-color: white;
+}
+
+.temp-info{
+    width: 20rem;
+    height: 15rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: #323544;
+    border-radius: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.top-layer{
+    width: 100%;
+    height: 15%;
+    background-color: #1b1b1bb4;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.top-layer p{
+    color: #fff;
+    font-weight: 300;
+    padding: 0.7rem;
+    font-size: 1rem;
+}
+
+.main-layer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 2rem; */
+    background-color: #323544;
+    /* overflow: hidden; */
+}
+.main-layer #city_name{
+    color: #bfc1c8;
+    font-weight: 300;
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+
+}
+.main-layer .middle-layer{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.main-layer .middle-layer p,
+.main-layer .middle-layer .fa{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.fa-cloud{
+    color: var(--main-color);   
+}
+
+sup{
+    font-size: 3rem;
+    margin-top: -5rem;
+}
+.data-hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+
+
+/* error page style */
+.err img{
+    /* width: 50%; */
+    height: 25rem;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--main-color);
+    margin-top: auto;
+}
+
+footer p{
+    margin: 0;
+    text-align: right;
+    color: #fff;
+    line-height: 3rem;
+    font-size: 0.8rem;
+    padding-right: 20px;
+}
+
+@media(max-width:768px){
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+    }
+    .form{
+        width: auto;
+    }
+
+    .temp-info{
+        width: auto;
+    }
+}
